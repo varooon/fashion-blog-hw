@@ -6,7 +6,8 @@ body{
 .container{
   margin-left: auto;
   margin-right: auto;
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .horizontal-line{
@@ -16,7 +17,6 @@ body{
 }
 
 .sartreslist{
-  width: auto;
   color: red;
   font-weight: normal;
   font-size: 40px;
@@ -129,4 +129,48 @@ p::first-letter{
 
 .footer-copyright{
   font-size: 14px;
+}
+
+.mobile-header-links{
+  display: none;
+}
+
+
+@media(max-width: 1000px){
+  .col-4{
+    display: none;
+  }
+
+  .sartreslist, .betterdressedpeople{
+    text-align: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .col-2{
+    display: none;
+  }
+
+  .col-8{
+    width: 100%;
+  }
+
+  .mobile-header-links{
+    display: block;
+  }
+
+  .mobile-header-links li{
+    list-style: none;
+    display: inline;
+  }
+
+  .mobile-header-links{
+    margin-left: -40px;
+    text-align: center;
+  }
+
+  .mobile-header-links li:nth-child(odd){
+    color: red;
+  }
+
 }
